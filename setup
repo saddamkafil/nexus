@@ -1,0 +1,13 @@
+Pull docker image from docekr-hub
+docker pull sonatype/nexus3
+
+Start docker conatiner using below command 
+docker run -d -p 8081:8081 -p yourport:yourport --name nexus sonatype/nexus3  or
+docker run -itd -p 8081:8081 --name nexus sonatype/nexus3
+
+Test nexus services are running or not by running below command
+cur loacalhost:8080
+
+To retrive admin password login to container and cat /nexus-data/admin.password
+
+for reference on any errors please visit https://blog.sonatype.com/sonatype-nexus-installation-using-docker
